@@ -77,15 +77,20 @@ const reactivity = (raw) => {
   })
 }
 
-const user = reactivity({
-  age: 19
-})
+// const user = reactivity({
+//   age: 19
+// })
 
-let double;
+// let double;
 
-effectWatch(() => {
-  double = user.age + 10
-  console.log(double);
-})
+// effectWatch(() => {
+//   double = user.age + 10
+//   console.log(double);
+// })
 
-user.age = 20
+// user.age = 20
+
+module.exports = {
+  effectWatch,
+  reactivity
+}

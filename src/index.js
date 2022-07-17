@@ -1,4 +1,4 @@
-const { reactive, effect } = require("@vue/reactivity");
+const { reactivity, effectWatch } = require("../core/reactivity/index");
 
 //  v1
 // let a = 10;
@@ -30,12 +30,12 @@ const { reactive, effect } = require("@vue/reactivity");
 
 // v3
 
-let a = reactive({
+let a = reactivity({
   value: 10
 })
 let b
 
-effect(() => {
+effectWatch(() => {
   b = a.value + 10
   console.log(b);
 })
