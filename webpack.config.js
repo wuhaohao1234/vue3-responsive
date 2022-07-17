@@ -14,7 +14,8 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'vue3 responsive'
+      title: 'vue3 responsive',
+      template: 'index.html'
     })
   ]
 };
