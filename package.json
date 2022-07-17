@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "dev": "npx webpack serve --open"
+  },
   "devDependencies": {
     "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.73.0",
