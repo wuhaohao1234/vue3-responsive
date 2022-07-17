@@ -41,3 +41,23 @@ effectWatch(() => {
 })
 
 a.value = 30
+
+const App = {
+  render(context) {
+    effectWatch(() => {
+      document.body.innerHTML = ''
+      const div = document.createElement('div')
+      div.innerHTML = context.state.count
+      document.body.append(div)
+    })
+
+  },
+  setUp() {
+    const state = reactivity({
+      count: 0
+    })
+    window.state = state
+    return {state}
+  }
+}
+App.render(App.setUp())
